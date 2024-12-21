@@ -6,11 +6,7 @@ This project uses Natural Language Processing (NLP) and Machine Learning techniq
 
 1. [Project Description](#project-description)
 2. [Technologies Used](#technologies-used)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Structure](#structure)
-6. [License](#license)
-
+   
 ## Project Description
 
 Phishing attacks are one of the most common cyber threats that target individuals and organizations. This project aims to develop a reliable system to detect phishing emails using various techniques in Natural Language Processing (NLP) and Machine Learning (ML). The model is trained using a labeled dataset of emails and uses a Random Forest classifier to make predictions.
