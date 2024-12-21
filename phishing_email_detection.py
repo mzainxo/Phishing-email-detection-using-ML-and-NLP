@@ -20,7 +20,7 @@ except LookupError:
 sia = SentimentIntensityAnalyzer()
 
 # Load the pre-trained model
-model_path = 'D:/Uni/7th_sem/NLP/models/email_detection_model4.pkl'
+model_path = 'D:/Uni/7th_sem/NLP/Project/models/email_detection_model4.pkl' #change the path
 classifier = joblib.load(model_path)
 
 # Ensure stopwords are downloaded only once
