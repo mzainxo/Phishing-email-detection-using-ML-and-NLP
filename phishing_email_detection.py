@@ -6,6 +6,7 @@ import email
 from email.header import decode_header
 from datetime import datetime
 import joblib
+import os
 from bs4 import BeautifulSoup
 from nltk.corpus import stopwords
 from nltk.sentiment import SentimentIntensityAnalyzer
@@ -19,8 +20,8 @@ except LookupError:
 # Initialize Sentiment Analyzer
 sia = SentimentIntensityAnalyzer()
 
-# Load the pre-trained model
-model_path = 'D:/Uni/7th_sem/NLP/Project/models/email_detection_model4.pkl' #change the path
+# Load the pre-trained model using a generic path
+model_path = os.path.join(os.path.dirname(__file__), 'models', 'email_detection_model4.pkl')
 classifier = joblib.load(model_path)
 
 # Ensure stopwords are downloaded only once
