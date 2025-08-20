@@ -161,9 +161,14 @@ def main():
     email_password = st.sidebar.text_input("App Password", type="password")
     max_emails = st.sidebar.slider("Max Emails to Fetch", min_value=1, max_value=50, value=5)
 
+
     folder = st.sidebar.segmented_control("Select Folder", ["Inbox", "Spam", "All Mail"])
     folder_map = {"Inbox": "INBOX", "Spam": "[Gmail]/Spam", "All Mail": "[Gmail]/All Mail"}
-    folderm = folder_map[folder]
+    try:
+        folderm = folder_map[folder]
+    except KeyError:
+        st.error("Please select a folder :)")
+        return
 
     start_fetch = st.sidebar.button("Fetch Emails")
 
